@@ -1,0 +1,39 @@
+Testing tested.py:
+
+Testing f:
+
+	Test 1...PASSED in 1.53e-06s
+	Test 2...PASSED in 6.89e-07s
+	Test 3...PASSED in 5.91e-07s
+
+	Passed 3/3 tests
+
+	Passed all tests for f
+
+Testing g:
+
+	Test 1...FAILED
+	Test 2...FAILED
+	Test 3...FAILED
+
+	Passed 0/3 tests
+
+	Test 1: Failure while testing g: From input 1, expected 1 but received 0
+	Test 2: Failure while testing g: From input 2, expected 2 but received 0
+	Test 3: Failure while testing g: From input 3, expected 3 but received 0
+
+Testing h:
+
+	Test 1...ERROR
+	Test 2...ERROR
+	Test 3...ERROR
+
+	Passed 0/3 tests
+
+	Test 1: Error while testing h: From input 1, expected 1 but received the following error: Exception
+	Test 2: Error while testing h: From input 2, expected 2 but received the following error: Exception
+	Test 3: Error while testing h: From input 3, expected 3 but received the following error: Exception
+
+Error: Could not locate function i in file tested.py
+
+Finished testing tested.py
