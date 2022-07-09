@@ -28,7 +28,7 @@ git clone https://github.com/JimmyVanHout/py_json_unit_test
 
 ### Create the Test Specifications File
 
-First, if it is not already present, create the **test specifications file**, which is a JSON file (a file with a `.json` extension) containing the test specifications. It must be formatted similarly to the following example:
+First, if it is not already present, create the **test specifications file**, which is a JSON file (a file containing JSON with a `.json` extension) containing the test specifications. It must be formatted similarly to the following example:
 
 ```
 {
@@ -82,21 +82,29 @@ python3 unit_test.py <path_to_spec_file>
 
 where `<path_to_spec_file>` is the path to the JSON specifications file.
 
+The program output will be printed to standard output. Example output for the test in the following section is given in `test/test_output.txt`. When the program is run, the status (`PASSED`, `FAILED`, `ERROR`) for each test is printed:
+
+* For each passed test, the CPU time is given.
+
+* For each failed test, the input, expected output, and received output is given.
+
+* For each error, the input, expected output, and error is given.
+
 ## Testing the Unit Test Program
 
-The files in `test` can be used to test the unit testing program. First, modify the path (in `tested_test_data.json`) of the file that will be tested to be: `test/tested.py`. Then, run the command:
+The files in `test` can be used to test the unit testing program. Run the command:
 
 ```
 python3 unit_test.py test/tested_test_data.json
 ```
 
-The expected output is in the file `test/test_output.txt`. You can also run:
+The expected output is in the file `test/test_output.txt`. To view only the differences between the program's output and the test output, you can run:
 
 ```
 python3 unit_test.py test/tested_test_data.json | diff - test/test_output.txt
 ```
 
-The only differences between the program output to standard output and the test output file, `test_output.txt`, should be the execution times of the first test function, `f`. For example, if the output of the previous command is similar to the following, the test of the unit test program has been successful:
+The only differences between the program's output to standard output and the test output file should be the execution times of the first tested function, `f`. For example, if the output of the previous command is similar to the following, the test of the unit test program has been successful:
 
 ```
 5,7c5,7
